@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site cu Linia și Butoane</title>
+    <style>
+        /* Stiluri pentru video de fundal */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Stiluri pentru linia groasă */
+        .linie {
+            width: 100%;
+            height: 1cm;
+            background-color: black;
+            display: flex; 
+            justify-content: flex-start; /* Aliniază butoanele la stânga */
+            align-items: center; /* Centrează butoanele pe verticală */
+            padding-left: 10px; /* Dă puțin spațiu pe stânga */
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Stiluri pentru butoane */
+        .buton {
+            padding: 8px 16px; /* Mai puțin spațiu pentru a înlătura marginile mari */
+            background-color: transparent; /* Fără fundal */
+            color: #7EC8E3; /* Albastru deschis pentru text */
+            border: none; /* Elimină borderul */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 8px; /* Spațiu între butoane */
+            transition: background-color 0.3s, color 0.3s; /* Adaugă o tranziție lină */
+        }
+
+        /* Schimbă culoarea butoanelor la hover */
+        .buton:hover {
+            background-color: #7EC8E3; /* Fundal albastru deschis la hover */
+            color: white; /* Culoare text alb la hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video de fundal -->
+    <video class="background-video" autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Linia groasă -->
+    <div class="linie">
+        <!-- Butoane linkuri -->
+        <a href="https://studii.md/" class="buton" target="_blank">Studii</a>
+        <a href="https://www.youtube.com/" class="buton" target="_blank">Youtube</a>
+    </div>
+</body>
+</html>
